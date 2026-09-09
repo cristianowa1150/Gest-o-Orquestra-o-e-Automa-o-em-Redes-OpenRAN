@@ -1,3 +1,4 @@
+```
 .
 ├── index.html
 ├── README.md
@@ -6,6 +7,7 @@
 └── config/
     ├── o1-netconf-device.xml
     └── ves-telemetry-event.json
+```
 
 
 # Gestão, Orquestração e Automação em Redes Open RAN: Estudo e Simulação do Service Management Orchestrator (SMO)
@@ -16,8 +18,8 @@ Este repositório contém o estudo teórico-prático, a especificação técnica
 
 ## 🚀 Demonstração On-line (Console / Emulador SMO)
 
-Você pode acessar a interface de controle e monitoramento simulado em tempo real hospedada no GitHub Pages:
-👉 **[Console de Simulação do SMO On-line](https://cristianowa1150.github.io/Gest-o-Orquestra-o-e-Automa-o-em-Redes-OpenRAN/)**
+Você pode acessar a interface de controle e monitoramento simulado em tempo real:
+👉 **[Console de Simulação do SMO On-line](./index.html)**
 
 ---
 
