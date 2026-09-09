@@ -19,7 +19,7 @@ Este repositório contém o estudo teórico-prático, a especificação técnica
 ## 🚀 Demonstração On-line (Console / Emulador SMO)
 
 Você pode acessar a interface de controle e monitoramento simulado em tempo real:
-👉 **[Console de Simulação do SMO On-line](./index.html)**
+👉 <a href="https://cristianowa1150.github.io/Gest-o-Orquestra-o-e-Automa-o-em-Redes-OpenRAN/index.html" target="_blank" rel="noopener noreferrer">Console de Simulação do SMO On-line</a>
 
 ---
 
