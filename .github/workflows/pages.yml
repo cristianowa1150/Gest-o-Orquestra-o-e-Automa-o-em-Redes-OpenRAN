@@ -1,22 +1,26 @@
 name: Publicar GitHub Pages
 
+# Publica o conteúdo estático do projeto sempre que a branch principal é atualizada.
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
+# Permissões necessárias para criar o artefato e publicar o site no Pages.
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Evita que execuções antigas concorram com a publicação mais recente.
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
   deploy:
+    # O endereço da publicação aparece no resumo da execução do workflow.
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -28,11 +32,13 @@ jobs:
       - name: Configurar Pages
         uses: actions/configure-pages@v5
         with:
+          # Habilita o Pages automaticamente para repositórios ainda não configurados.
           enablement: true
 
       - name: Preparar arquivos do site
         uses: actions/upload-pages-artifact@v3
         with:
+          # O projeto é estático; todos os arquivos da raiz fazem parte do site.
           path: .
 
       - name: Publicar site

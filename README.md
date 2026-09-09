@@ -31,6 +31,11 @@ Você pode acessar a interface de controle e monitoramento simulado em tempo rea
   - `ves-telemetry-event.json`: Evento JSON de telemetria/alarme para o coletor VES.
 - `index.html`: Dashboard interativo simulando a ingestão de eventos VES, controle de políticas A1 e gerenciamento de infraestrutura O2.
 
+### Campos dos arquivos de configuração
+
+- No `o1-netconf-device.xml`, os comentários explicam o alvo da configuração, a O-RU, a largura de banda e a potência de transmissão.
+- O `ves-telemetry-event.json` permanece em JSON puro, pois esse formato não aceita comentários. A estrutura `commonEventHeader` identifica o evento, sua origem, prioridade e severidade; `faultFields` descreve a falha, a condição do alarme e os valores de PRB observados.
+
 ---
 
 ## 🛠️ Tecnologias e Padrões Analisados

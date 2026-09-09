@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Metadados básicos para codificação, responsividade e identificação da página. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMO - Service Management Orchestrator Console</title>
+    <!-- Estilos da console: cores, cartões, indicadores, terminal e botões. -->
     <style>
         :root {
             --bg-primary: #0b0f19;
@@ -142,6 +144,7 @@
 </head>
 <body>
 
+    <!-- Cabeçalho com a identificação do SMO e o estado simulado da plataforma. -->
     <div class="header">
         <div>
             <h1>O-RAN SMO Console & Emulador (OSC Release)</h1>
@@ -150,6 +153,7 @@
         <div class="badge"><span class="dot"></span> SMO Active & Listening</div>
     </div>
 
+    <!-- Painéis resumidos das interfaces O2, O1 e A1/Non-RT RIC. -->
     <div class="grid">
         <div class="card">
             <h3>Gerenciamento O-Cloud (Interface O2)</h3>
@@ -177,6 +181,7 @@
         </div>
     </div>
 
+    <!-- Terminal visual que apresenta os eventos simulados em tempo real. -->
     <div class="card">
         <h3>Log de Eventos, Telemetria e Transações O1/NETCONF em Tempo Real</h3>
         <div class="terminal" id="terminal">
@@ -186,11 +191,13 @@
         </div>
     </div>
 
+    <!-- Lógica da simulação: atualiza métricas, gera logs e executa o closed loop. -->
     <script>
         let counter = 1842;
         const terminal = document.getElementById('terminal');
         const vesCounter = document.getElementById('ves-counter');
 
+        // Adiciona uma mensagem colorida ao terminal conforme o tipo do evento.
         function addLog(msg, type = 'info') {
             const time = new Date().toLocaleTimeString();
             const div = document.createElement('div');
@@ -206,6 +213,7 @@
             terminal.scrollTop = terminal.scrollHeight;
         }
 
+        // Simula a chegada periódica de métricas e eventos das interfaces O1 e O2.
         setInterval(() => {
             counter += Math.floor(Math.random() * 6);
             vesCounter.innerText = counter.toLocaleString();
@@ -220,6 +228,7 @@
             addLog(randomEvent, 'info');
         }, 4500);
 
+        // Simula um alarme crítico e a resposta automatizada de uma malha fechada.
         function triggerClosedLoop() {
             addLog("[VES-Collector] CRITICAL ALARM: O-DU-UBERLANDIA-01 PRB Utilization > 95%", "err");
             addLog("[Non-RT RIC] Traffic Steering rApp triggered by Kafka event", "warn");

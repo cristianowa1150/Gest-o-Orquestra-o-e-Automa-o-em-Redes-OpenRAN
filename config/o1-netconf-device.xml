@@ -6,17 +6,23 @@
 -->
 <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <edit-config>
+    <!-- Indica que a alteração será aplicada à configuração em execução. -->
     <target>
       <running/>
     </target>
     <config>
+      <!-- Bloco de configuração do elemento de processamento O-RAN. -->
       <o-ran-processing-element xmlns="urn:o-ran:components:1.0">
         <ru-elements>
+          <!-- Identificação da unidade de rádio que receberá a configuração. -->
           <name>O-RU-UBERLANDIA-01</name>
+          <!-- Tipo de sessão de transporte usada pela O-RU. -->
           <transport-session-type>ETH-INTERFACE</transport-session-type>
+          <!-- Largura de banda configurada para o elemento de rádio, em MHz. -->
           <bandwidth>
             <bandwidth-mhz>100</bandwidth-mhz>
           </bandwidth>
+          <!-- Potência de transmissão configurada para o rádio, em dBm. -->
           <tx-power-setting>
             <tx-power-dbm>43</tx-power-dbm>
           </tx-power-setting>
