@@ -1,0 +1,22 @@
+{
+  "event": {
+    "commonEventHeader": {
+      "domain": "fault",
+      "eventId": "fault_00000001",
+      "eventName": "Fault_O-DU_HighPRBUsage",
+      "sourceName": "O-DU-UBERLANDIA-01",
+      "reportingEntityName": "O-DU-UBERLANDIA-01",
+      "priority": "High",
+      "severity": "CRITICAL",
+      "version": "4.1"
+    },
+    "faultFields": {
+      "faultFieldsVersion": "4.0",
+      "specificProblem": "PRB Utilization Exceeded Threshold",
+      "alarmInterfaceA": "O1-NETCONF",
+      "eventSeverity": "CRITICAL",
+      "eventSourceType": "O-DU",
+      "alarmCondition": "prbCongestionHigh"
+    }
+  }
+}
