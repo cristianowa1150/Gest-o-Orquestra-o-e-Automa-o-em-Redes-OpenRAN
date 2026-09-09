@@ -46,5 +46,7 @@ Você pode acessar a interface de controle e monitoramento simulado em tempo rea
 
 ## 👨‍💻 Autores
 
-Cristiano Silveira Silva
-Gilmar 
+- Cristiano Silveira Silva
+- Gilmar 
+- Josenildo
+- 
