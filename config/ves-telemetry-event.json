@@ -2,21 +2,30 @@
   "event": {
     "commonEventHeader": {
       "domain": "fault",
-      "eventId": "fault_00000001",
-      "eventName": "Fault_O-DU_HighPRBUsage",
+      "eventId": "fault_00008912",
+      "eventName": "Fault_O-DU_PRB_Congestion",
+      "sourceId": "UUID-ODU-MG-01",
       "sourceName": "O-DU-UBERLANDIA-01",
       "reportingEntityName": "O-DU-UBERLANDIA-01",
       "priority": "High",
       "severity": "CRITICAL",
-      "version": "4.1"
+      "startEpochMicrosec": 1789123200000000,
+      "lastEpochMicrosec": 1789123205000000,
+      "version": "4.1",
+      "vesEventListenerVersion": "7.2.1"
     },
     "faultFields": {
       "faultFieldsVersion": "4.0",
-      "specificProblem": "PRB Utilization Exceeded Threshold",
+      "specificProblem": "Physical Resource Block (PRB) Utilization Exceeded 95%",
       "alarmInterfaceA": "O1-NETCONF",
       "eventSeverity": "CRITICAL",
-      "eventSourceType": "O-DU",
-      "alarmCondition": "prbCongestionHigh"
+      "eventSourceType": "O-DU-GNB",
+      "alarmCondition": "prbUtilizationHigh",
+      "alarmAdditionalInformation": {
+        "cellId": "401",
+        "currentPrbUsage": "98%",
+        "threshold": "90%"
+      }
     }
   }
 }

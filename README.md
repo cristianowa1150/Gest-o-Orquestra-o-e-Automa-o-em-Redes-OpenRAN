@@ -1,18 +1,48 @@
-# Análise Prática e Arquitetural do Service Management Orchestrator (SMO)
+.
+├── index.html
+├── README.md
+├── docs/
+│   └── relatorio_smo.md
+└── config/
+    ├── o1-netconf-device.xml
+    └── ves-telemetry-event.json
 
-Este repositório contém o estudo teórico-prático e a documentação sobre a arquitetura, interfaces e mecanismos de gerenciamento da plataforma **Service Management Orchestrator (SMO)** baseada na especificação do **O-RAN Software Community (OSC)** e **ONAP**.
 
-## Conteúdo
-- `docs/relatorio_smo.md`: Relatório detalhado abordando todos os requisitos de avaliação da disciplina.
-- `config/`: Exemplos de payloads e configurações para simulação das interfaces O1 e O2.
+# Gestão, Orquestração e Automação em Redes Open RAN: Estudo e Simulação do Service Management Orchestrator (SMO)
 
-## Plataforma Analisada
-- **Framework:** O-RAN Software Community (OSC) SMO / ONAP SDNC & Non-RT RIC
-- **Ambiente de Simulação:** O-RAN-SC SIM (O1/O2 Emulator)
+Este repositório contém o estudo teórico-prático, a especificação técnica e o ambiente de simulação e controle para a plataforma **Service Management Orchestrator (SMO)**, desenvolvida sob as especificações da **O-RAN Alliance** e implementada com base na arquitetura do **O-RAN Software Community (OSC)** e **ONAP**.
 
-## Como Visualizar
-Acesse a pasta `docs/` para o relatório completo com diagramas textuais e análises técnicas das interfaces O1, O2, A1 e suporte ao ciclo de vida das NFs.
+---
 
-## Demonstração Online
-Acesse o Dashboard/Emulador do SMO hospedado via GitHub Pages:  
-👉 **[https://seu-usuario.github.io/seu-repositorio/](https://seu-usuario.github.io/seu-repositorio/)**
+## 🚀 Demonstração On-line (Console / Emulador SMO)
+
+Você pode acessar a interface de controle e monitoramento simulado em tempo real hospedada no GitHub Pages:
+👉 **[Console de Simulação do SMO On-line](https://cristianowa1150.github.io/Gest-o-Orquestra-o-e-Automa-o-em-Redes-OpenRAN/)**
+
+---
+
+## 📂 Estrutura do Repositório
+
+- `docs/relatorio_smo.md`: Relatório acadêmico/técnico completo abordando os tópicos exigidos na avaliação (Arquitetura, Interfaces O1/O2, FCAPS, Non-RT RIC, LCM de NFs e O-Cloud).
+- `config/`: Exemplos práticos de arquivos de payload e mensagens de controle das interfaces O1:
+  - `o1-netconf-device.xml`: Payload RPC NETCONF `<edit-config>` baseado em modelos YANG.
+  - `ves-telemetry-event.json`: Evento JSON de telemetria/alarme para o coletor VES.
+- `index.html`: Dashboard interativo simulando a ingestão de eventos VES, controle de políticas A1 e gerenciamento de infraestrutura O2.
+
+---
+
+## 🛠️ Tecnologias e Padrões Analisados
+
+- **Arquiteturas:** O-RAN Alliance Architecture WG1/WG10, ETSI NFV MANO, ONAP Framework (SDNC, DMaaP).
+- **Interfaces & Protocolos:**
+  - **O1:** NETCONF/YANG (Configuração), HTTP REST/JSON VES (Virtual Event Streaming para FCAPS).
+  - **O2:** REST APIs (O2ims para gerenciamento de infraestrutura e O2dms para orquestração de recursos).
+  - **A1:** HTTP/REST (Interface entre Non-RT RIC e Near-RT RIC para publicação de políticas).
+- **Gerenciamento de Infraestrutura:** O-Cloud, Kubernetes (Multi-cluster), Helm Charts.
+
+---
+
+## 👨‍💻 Autores
+
+Cristiano Silveira Silva
+Gilmar 

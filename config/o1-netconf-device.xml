@@ -1,8 +1,9 @@
-//Exemplo de requisição NETCONF via O1 enviada pelo SDNC do SMO
-//para ajustar parâmetros operacionais da O-DU:
-
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Exemplo de requisição RPC NETCONF via Interface O1
+    Enviada pelo ONAP SDNC (SMO) para uma O-DU
+    Objetivo: Reconfiguração operatividade de largura de banda e potência
+-->
 <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <edit-config>
     <target>
@@ -11,10 +12,14 @@
     <config>
       <o-ran-processing-element xmlns="urn:o-ran:components:1.0">
         <ru-elements>
-          <name>O-RU-01</name>
+          <name>O-RU-UBERLANDIA-01</name>
+          <transport-session-type>ETH-INTERFACE</transport-session-type>
           <bandwidth>
-            <bandwidth-mhz>40</bandwidth-mhz>
+            <bandwidth-mhz>100</bandwidth-mhz>
           </bandwidth>
+          <tx-power-setting>
+            <tx-power-dbm>43</tx-power-dbm>
+          </tx-power-setting>
         </ru-elements>
       </o-ran-processing-element>
     </config>
