@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     Exemplo de requisição RPC NETCONF via Interface O1
-    Enviada pelo ONAP SDNC (SMO) para uma O-DU
+    Enviada pelo OSC-SMO para uma O-DU por meio da interface O1
     Objetivo: Reconfiguração operatividade de largura de banda e potência
 -->
 <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
