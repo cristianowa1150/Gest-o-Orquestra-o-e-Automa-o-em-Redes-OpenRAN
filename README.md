@@ -1,4 +1,4 @@
-# Opção 1: OSC-SMO para gestão e automação Open RAN
+  # Opção 1: OSC-SMO para gestão e automação Open RAN
 
 ```text
 .
@@ -65,5 +65,6 @@ O painel é um emulador didático: os eventos, métricas, sessões NETCONF e est
 ## 👨‍💻 Autores
 
 - Cristiano Silveira Silva
-- Gilmar
-- Josenildo
+- Gilmar Moisés da Silva
+- Josenildo Pereira Barbosa da Silva
+- Roberto Carlos Valicheski
